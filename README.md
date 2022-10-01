@@ -21,7 +21,7 @@ for key in 학기별성적:
   학기별성적[key]=np.floor(학기별성적[key]*100)/100
 print(학기별성적)
 ```
-![image]("./학기별성적.png")
+![image]("https://github.com/Eundms/SSU_HackjumCalculator/blob/master/img/%ED%95%99%EA%B8%B0%EB%B3%84%EC%84%B1%EC%A0%81.png")
 
 ### 전체 성적
 ```Python
@@ -30,4 +30,4 @@ for key in ['전체평점평균','전공평점평균','교양평점평균']:
   전체성적[key]=np.floor(전체성적[key]*100)/100
 print(전체성적)
 ```
-![image]("./전체성적.png")
+![image]("https://github.com/Eundms/SSU_HackjumCalculator/blob/master/img/%EC%A0%84%EC%B2%B4%EC%84%B1%EC%A0%81.png")
