@@ -6,10 +6,10 @@
 * (추가 예정) 그래프 
 
 #### 가상환경
-> python -m venv venv
-> ./venv/Scripts/activate
-> pip install numpy pandas openpyxl
-> python main.py
+> python -m venv venv  
+> ./venv/Scripts/activate  
+> pip install numpy pandas openpyxl  
+> python main.py  
 
 ```Python
 myhackjum=MyHackjum("./grade/hackjum.xlsx",Soongsil())
