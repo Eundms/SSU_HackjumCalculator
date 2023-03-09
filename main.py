@@ -105,12 +105,32 @@ class MyHackjum:
       return 계산기.caculate평점평균(self,group)  
 
 
-myhackjum=MyHackjum("./grade/hackjum.xlsx",Soongsil())
+FILE_PATH  = "./grade/hackjum.xlsx"
+
+print("====학기별 성적====")
+myhackjum=MyHackjum(FILE_PATH,Soongsil())
 학기별성적=myhackjum.get평점평균('학기')
 for key in 학기별성적:
   학기별성적[key]=np.floor(학기별성적[key]*100)/100
 print(학기별성적)
+
+
+print("====전체 성적====")
 전체성적=myhackjum.get평점평균('전체')
 for key in ['전체평점평균','전공평점평균','교양평점평균']:
   전체성적[key]=np.floor(전체성적[key]*100)/100
 print(전체성적)
+
+
+print("====학점 변화 그래프====")
+from matplotlib import pyplot as plt
+plt.rc('font', family='NanumBarunGothic') 
+
+key=hackgi
+name=['전체평점평균','전공평점평균']
+for n in name:
+  grade=[]
+  for k in key:
+    grade.append(학기별성적[n][k])
+  plt.plot(key,grade,label=n)
+  plt.legend()
